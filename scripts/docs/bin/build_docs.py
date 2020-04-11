@@ -136,6 +136,9 @@ def find_module_for_item(modules, item):
     dbg("find_module_for_item: Searching for: %s" % item)
     module = None
 
+    if (item == "Live" or item == "Enhancement" or item == "Suite" or item == "les"):
+      return None
+    
     # We need a shortcut here for root level items
     if not ARGUMENTS.standalone and item.count('.') == 1:
         dbg("find_module_for_item: Using root-level shortcut")
@@ -249,7 +252,8 @@ def process_docstrings(docstrings):
             modulename = find_module_for_item(list(docs.keys()), itemname)
             dbg("process_docstrings:   Assigning item to module: %s" %
                 modulename)
-            docs[modulename]["items"][itemname] = chunk
+            if modulename != None:
+              docs[modulename]["items"][itemname] = chunk
 
     return docs
 

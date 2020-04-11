@@ -107,6 +107,10 @@ for hs_lua in ${HS_LUAONLY} ${HS_MODULES} ; do
   cp -av "${SRCROOT}/extensions/${hs_lua}/init.lua" "${HS_DST}/${hs_lua}/init.lua"
 done
 
+# Special copier for the LES module
+mkdir -pv "${HS_DST}/les"
+cp -Rv "${SRCROOT}/extensions/les/" "${HS_DST}/les/"
+
 # Now, copy all of our internal.so's
 for hs_module in ${HS_MODULES} ; do
   mkdir -pv "${HS_DST}/${hs_module}"
