@@ -9,7 +9,7 @@ if console then console:close() end -- if the console is up, close the console. 
 --	Initialisation  --
 ----------------------
 
--- Hammerspoon's default behavior is to look for an init.lua file in the ~/.hammerspoon filder; otherwise it will show a popup with a getting started guide.
+-- Hammerspoon's default behavior is to look for an init.lua file in the ~/.les filder; otherwise it will show a popup with a getting started guide.
 -- The modified LES .app package will instead drop the included /Contents/Resources/init.lua into the right spot and force hammerspoon to restart; causing it to check for the init.lua file again (which now exists)
 -- This init.lua file redirects back to the application folder and opens LESmain.lua (this file) inside the app bundle.
 -- This is a super janky way to go about including a script inside a hammerspoon package...
@@ -19,7 +19,7 @@ if console then console:close() end -- if the console is up, close the console. 
 -- and the actual redirect can be found inside your hammerspoon folder or at /Contents/Resources/init.lua
 
 function testfirstrun() -- tests if "firstrun.txt" exists. I use this text file on both mac and windows to keep track of the current version.
-  local filepath = homepath .. "/.hammerspoon/resources/firstrun.txt"
+  local filepath = homepath .. "/.les/resources/firstrun.txt"
   local f=io.open(filepath,"r")
   if f~=nil then 
     io.close(f) 
@@ -33,7 +33,7 @@ if testfirstrun() == false then -- stuff to do when you start the program for th
   print("This is the first time running LES")
 
   function setautoadd(newval) -- declaring the function that replaces the "addtostartup" variable in the settings text file to match the users' dialog box selection.
-    local hFile = io.open(homepath .. "/.hammerspoon/settings.ini", "r") --Reading settings.
+    local hFile = io.open(homepath .. "/.les/settings.ini", "r") --Reading settings.
     local restOfFile
     local lineCt = 1
     local newline = "addtostartup = " .. newval .. [[]]
@@ -51,7 +51,7 @@ if testfirstrun() == false then -- stuff to do when you start the program for th
     end
     hFile:close()
 
-    hFile = io.open(homepath .. "/.hammerspoon/settings.ini", "w") --write the file.
+    hFile = io.open(homepath .. "/.les/settings.ini", "w") --write the file.
     for i, line in ipairs(lines) do
       hFile:write(line, "\n")
     end
@@ -59,13 +59,13 @@ if testfirstrun() == false then -- stuff to do when you start the program for th
     hFile:close()
   end
 
-  os.execute([[mkdir -p ~/.hammerspoon/resources]]) -- creates the resources folder
-  os.execute([[echo '' >~/.hammerspoon/resources/firstrun.txt]]) -- making sure the section of this script doesn't trigger twice
-  os.execute([[echo '' >~/.hammerspoon/resources/strict.txt]]) -- enables strict time by default
+  os.execute([[mkdir -p ~/.les/resources]]) -- creates the resources folder
+  os.execute([[echo '' >~/.les/resources/firstrun.txt]]) -- making sure the section of this script doesn't trigger twice
+  os.execute([[echo '' >~/.les/resources/strict.txt]]) -- enables strict time by default
 
-  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.hammerspoon/]]) -- extracting config defaults from the .Hidden directory embedded inside the modified hammerspoon .app package.
-  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/menuconfig.ini ~/.hammerspoon/]])
-  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/readmejingle.wav ~/.hammerspoon/resources/]])
+  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.les/]]) -- extracting config defaults from the .Hidden directory embedded inside the modified hammerspoon .app package.
+  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/menuconfig.ini ~/.les/]])
+  os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/readmejingle.wav ~/.les/resources/]])
 
   b, t, o = hs.osascript.applescript([[tell application "System Events" to display dialog "You're all set! Would you like to set LES to launch on login? (this can be changed later)" buttons {"Yes", "No"} default button "No" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]])
   -- I'm using applescript to create dialog boxes, becuase it gives me more options about how to present them. I only keep the user's "option", the other variables are basically always cleared right after to save memory.
@@ -85,12 +85,12 @@ end
 
  -- updating LES using the installer basically only replaces the .app file in your applications folder with the new one.
  -- this area of the script makes sure that the init.lua script file is replaced again if I ever make a change to it.
- -- the init.lua file is not THIS file, it's the redirect that's dropped into ~/.hammerspoon.
+ -- the init.lua file is not THIS file, it's the redirect that's dropped into ~/.les.
 
 function testcurrentversion(ver)
 
   print("testing for: " .. ver)
-  local filepath = (homepath .. "/.hammerspoon/resources/version.txt")
+  local filepath = (homepath .. "/.les/resources/version.txt")
   local boi = io.open(filepath, "r") -- some of my variable names are super dumb; "version" was already in use so "boi" seemed like the next best choice?
 
   if boi ~= nil then
@@ -111,7 +111,7 @@ function testcurrentversion(ver)
     return false
 
   else 
-    os.execute([[echo 'beta 9' >~/.hammerspoon/resources/version.txt]])
+    os.execute([[echo 'beta 9' >~/.les/resources/version.txt]])
     return true
   end
 
@@ -121,9 +121,9 @@ if testcurrentversion("beta 9") == false and testfirstrun() == true then -- this
   hs.notify.show("Live Enhancement Suite", "Updating and restarting...", "Old installation detected")
   local var = hs.osascript.applescript([[delay 2]])
   if var == true then
-    os.execute([[rm ~/.hammerspoon/resources/version.txt]])
-    os.execute([[echo 'beta 9' >~/.hammerspoon/resources/version.txt]])
-    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/init.lua ~/.hammerspoon/]]) -- otherwise replace the init.lua again with the one currently in the application.
+    os.execute([[rm ~/.les/resources/version.txt]])
+    os.execute([[echo 'beta 9' >~/.les/resources/version.txt]])
+    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/init.lua ~/.les/]]) -- otherwise replace the init.lua again with the one currently in the application.
     hs.alert.show("Restarting..")
     hs.osascript.applescript([[delay 2]])
     hs.reload()
@@ -139,7 +139,7 @@ end
 -- I declare them up here because it fits the theme of this section of the script.
 
 function testsettings()
-  local filepath = homepath .. "/.hammerspoon/settings.ini"
+  local filepath = homepath .. "/.les/settings.ini"
   local f=io.open(filepath,"r")
   local var = nil
   if f~=nil then 
@@ -155,7 +155,7 @@ function testsettings()
     b = nil
     t = nil
     if o == [[{ 'bhit':'utxt'("Yes") }]] then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.hammerspoon/]])
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.les/]])
     elseif o == [[{ 'bhit':'utxt'("No") }]] then
       os.exit()
     end
@@ -164,7 +164,7 @@ function testsettings()
 end
 
 function testmenuconfig()
-  local filepath = homepath .. "/.hammerspoon/menuconfig.ini"
+  local filepath = homepath .. "/.les/menuconfig.ini"
   local f=io.open(filepath,"r")
   local var = nil
   if f~=nil then 
@@ -180,7 +180,7 @@ function testmenuconfig()
     b = nil
     t = nil
     if o == [[{ 'bhit':'utxt'("Yes") }]] then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/menuconfig.ini ~/.hammerspoon/]])
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/menuconfig.ini ~/.les/]])
     elseif o == [[{ 'bhit':'utxt'("No") }]] then
       os.exit()
     end
@@ -197,8 +197,8 @@ end
 -- I was too lazy to make a script that changes the table contents so there's just two tables, one for when there's debug, and one for when there's not.
 
 menubarwithdebugoff = {
-    { title = "Configure Menu", fn = function() hs.osascript.applescript([[do shell script "open ~/.hammerspoon/menuconfig.ini -a textedit"]]) end },
-    { title = "Configure Settings", fn = function() hs.osascript.applescript([[do shell script "open ~/.hammerspoon/settings.ini -a textedit"]]) end },
+    { title = "Configure Menu", fn = function() hs.osascript.applescript([[do shell script "open ~/.les/menuconfig.ini -a textedit"]]) end },
+    { title = "Configure Settings", fn = function() hs.osascript.applescript([[do shell script "open ~/.les/settings.ini -a textedit"]]) end },
     { title = "-" },  
     { title = "Donate", fn = function() hs.osascript.applescript([[open location "https://www.paypal.me/enhancementsuite"]]) end },
     { title = "-" },  
@@ -214,10 +214,10 @@ menubarwithdebugoff = {
 menubartabledebugon = {
     { title = "Console", fn = function() hs.openConsole(true) end },
     { title = "Restart", fn = function() if trackname then ; coolfunc() ; end ; hs.reload() end },
-    { title = "Open Hammerspoon Folder", fn = function() hs.osascript.applescript([[do shell script "open ~/.hammerspoon/ -a Finder"]]) end },
+    { title = "Open Hammerspoon Folder", fn = function() hs.osascript.applescript([[do shell script "open ~/.les/ -a Finder"]]) end },
     { title = "-" },
-    { title = "Configure Menu", fn = function() hs.osascript.applescript([[do shell script "open ~/.hammerspoon/menuconfig.ini -a textedit"]]) end },
-    { title = "Configure Settings", fn = function() hs.osascript.applescript([[do shell script "open ~/.hammerspoon/settings.ini -a textedit"]]) end },
+    { title = "Configure Menu", fn = function() hs.osascript.applescript([[do shell script "open ~/.les/menuconfig.ini -a textedit"]]) end },
+    { title = "Configure Settings", fn = function() hs.osascript.applescript([[do shell script "open ~/.les/settings.ini -a textedit"]]) end },
     { title = "-" },  
     { title = "Donate", fn = function() hs.osascript.applescript([[open location "https://www.paypal.me/enhancementsuite"]]) end },
     { title = "-" },  
@@ -230,7 +230,7 @@ menubartabledebugon = {
     { title = "Exit", fn = function() if trackname then ; coolfunc() ; end ; os.exit() end }
 }
 
-filepath = homepath .. "/.hammerspoon/resources/strict.txt"
+filepath = homepath .. "/.les/resources/strict.txt"
 f=io.open(filepath,"r")
 if f~=nil then 
   io.close(f) 
@@ -303,7 +303,7 @@ menu2 = {
 -- this is what happens when you hit "readme" in the default plugin menu.
 
 function readme()
-  local readmejingleobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/readmejingle.wav")
+  local readmejingleobj = hs.sound.getByFile(homepath .. "/.les/resources/readmejingle.wav")
   readmejingleobj:device(nil)
   readmejingleobj:loopSound(false)
   readmejingleobj:play()
@@ -647,7 +647,7 @@ end
 -----------------------------------
 
 function settingserrorbinary(message, range) -- this is a generic error message box function so I didn't have to write this long line out every time
-  if hs.osascript.applescript([[tell application "System Events" to display dialog "Error found in settings.ini" & return & "Value for \"]] .. message .. [[\" is not ]] .. range .. [[." buttons {"Ok"} default button "Ok" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]]) then os.execute([[open ~/.hammerspoon/settings.ini -a textedit]]) ; os.exit() end
+  if hs.osascript.applescript([[tell application "System Events" to display dialog "Error found in settings.ini" & return & "Value for \"]] .. message .. [[\" is not ]] .. range .. [[." buttons {"Ok"} default button "Ok" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]]) then os.execute([[open ~/.les/settings.ini -a textedit]]) ; os.exit() end
 end
 
 function msgBox(message) -- another generic message box function. I only used it once; that's why it's still here.
@@ -860,7 +860,7 @@ function buildSettings() -- this function digests the settings.ini file.
       if hs.keycodes.map[settingsArray[i]:gsub(".*(.*)%=%s","%1")] == nil and _G.nomacro == nil then -- checks if the entered key exists on the keyboard.
       	-- there is an alternate error message here because the generic one confused too many people.
         hs.osascript.applescript([[tell application "System Events" to display dialog "Hey! The settings entry for \"pianorollmacro\" is not a character corresponding to a key on your keyboard." & return & "" & return & "Closing this dialog box will open the settings file for you; please change the character under \"pianorollmacro\" to a key that exists on your keyboard and then restart the program. You won't be able to properly use many features without it." & return & "" & return & "LES will continue to run without a proper pianoroll macro mapped." buttons {"Ok"} default button "Ok" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]]) 
-        os.execute([[open ~/.hammerspoon/settings.ini -a textedit]])
+        os.execute([[open ~/.les/settings.ini -a textedit]])
         _G.nomacro = true -- a variable that keeps track of whether or not there's a working macro, functions that use it will be excluded when there's not.
       else
         _G.pianorollmacro = hs.keycodes.map[settingsArray[i]:gsub(".*(.*)%=%s","%1")]
@@ -2080,56 +2080,56 @@ function cheatmenu()
           end
         end
         print("live is closed")
-        os.execute([[mkdir -p ~/.hammerspoon/resources/als\ Lessons]])
-        os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/als\ Lessons/lessonsEN.txt ~/.hammerspoon/resources/als\ Lessons]])
-        os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/als.als ~/.hammerspoon/resources]])
+        os.execute([[mkdir -p ~/.les/resources/als\ Lessons]])
+        os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/als\ Lessons/lessonsEN.txt ~/.les/resources/als\ Lessons]])
+        os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/als.als ~/.les/resources]])
         print("done cloning project")
         hs.osascript.applescript([[delay 2
-          tell application "Finder" to open POSIX file "]] .. homepath .. [[/.hammerspoon/resources/als.als"]])
+          tell application "Finder" to open POSIX file "]] .. homepath .. [[/.les/resources/als.als"]])
         return true
       end
 
     elseif enteredcheat == "303" or enteredcheat == "sylenth" then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/arp303.mp3 ~/.hammerspoon/resources/]])
-      local soundobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/arp303.mp3")
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/arp303.mp3 ~/.les/resources/]])
+      local soundobj = hs.sound.getByFile(homepath .. "/.les/resources/arp303.mp3")
       soundobj:device(nil)
       soundobj:loopSound(false)
       soundobj:play()
-      os.execute([[rm ~/.hammerspoon/resources/arp303.mp3]])
+      os.execute([[rm ~/.les/resources/arp303.mp3]])
       hs.osascript.applescript([[delay ]].. math.ceil(soundobj:duration()))
       msgBox("thank you for trying this demo")
 
     elseif enteredcheat == "image line" or enteredcheat == "fl studio" then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/flstudio.mp3 ~/.hammerspoon/resources/]])
-      local soundobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/flstudio.mp3")
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/flstudio.mp3 ~/.les/resources/]])
+      local soundobj = hs.sound.getByFile(homepath .. "/.les/resources/flstudio.mp3")
       soundobj:device(nil)
       soundobj:loopSound(false)
       soundobj:play()
-      os.execute([[rm ~/.hammerspoon/resources/flstudio.mp3]])
+      os.execute([[rm ~/.les/resources/flstudio.mp3]])
 
     elseif enteredcheat == "ghost" or enteredcheat == "ilwag" or enteredcheat == "lvghst" then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/lvghst.mp3 ~/.hammerspoon/resources/]])
-      local soundobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/lvghst.mp3")
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/lvghst.mp3 ~/.les/resources/]])
+      local soundobj = hs.sound.getByFile(homepath .. "/.les/resources/lvghst.mp3")
       soundobj:device(nil)
       soundobj:loopSound(false)
       soundobj:play()
-      os.execute([[rm ~/.hammerspoon/resources/lvghst.mp3]])
+      os.execute([[rm ~/.les/resources/lvghst.mp3]])
 
     elseif enteredcheat == "live enhancement sweet" or enteredcheat == "les" or enteredcheat == "sweet" then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/LES_vox.wav ~/.hammerspoon/resources/]])
-      local soundobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/LES_vox.wav")
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/LES_vox.wav ~/.les/resources/]])
+      local soundobj = hs.sound.getByFile(homepath .. "/.les/resources/LES_vox.wav")
       soundobj:device(nil)
       soundobj:loopSound(false)
       soundobj:play()
-      os.execute([[rm ~/.hammerspoon/resources/LES_vox.wav]])
+      os.execute([[rm ~/.les/resources/LES_vox.wav]])
 
     elseif enteredcheat == "yo twitter" or enteredcheat == "twitter" then
-      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/yotwitter.mp3 ~/.hammerspoon/resources/]])
-      local soundobj = hs.sound.getByFile(homepath .. "/.hammerspoon/resources/yotwitter.mp3")
+      os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/yotwitter.mp3 ~/.les/resources/]])
+      local soundobj = hs.sound.getByFile(homepath .. "/.les/resources/yotwitter.mp3")
       soundobj:device(nil)
       soundobj:loopSound(false)
       soundobj:play()
-      os.execute([[rm ~/.hammerspoon/resources/ yotwitter.mp3]])
+      os.execute([[rm ~/.les/resources/ yotwitter.mp3]])
       hs.osascript.applescript([[open location "https://twitter.com/aevitunes"
       open location "https://twitter.com/sylvianyeah"
       open location "https://twitter.com/DylanTallchief"
@@ -2137,7 +2137,7 @@ function cheatmenu()
       open location "https://twitter.com/InvertedSilence"
       open location "https://twitter.com/FalseProdigyUS"
       open location "https://twitter.com/DirectOfficial"]])
-      os.execute([[rm ~/.hammerspoon/resources/yotwitter.mp3]])
+      os.execute([[rm ~/.les/resources/yotwitter.mp3]])
 
     elseif enteredcheat == "owo" or enteredcheat == "uwu" or enteredcheat == "what's this" or enteredcheat == "what" then
       msgboxscript = [[display dialog "owowowowoowoowowowoo what's this????????? ^^ nya?" buttons {"ok"} default button "ok" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]]
@@ -2210,7 +2210,7 @@ function setstricttime() -- this function manages the check box in the menu
     menubarwithdebugoff[7].state = "off"
     menubartabledebugon[11].state = "off"
     _G.stricttimevar = false
-    os.execute([[rm ~/.hammerspoon/resources/strict.txt]])
+    os.execute([[rm ~/.les/resources/strict.txt]])
     if appname then
       clock:start()
     end
@@ -2218,7 +2218,7 @@ function setstricttime() -- this function manages the check box in the menu
     menubarwithdebugoff[7].state = "on"
     menubartabledebugon[11].state = "on"
     _G.stricttimevar = true
-    os.execute([[echo '' >~/.hammerspoon/resources/strict.txt]])
+    os.execute([[echo '' >~/.les/resources/strict.txt]])
     if testLive() ~= true then
       clock:stop()
     end
@@ -2226,19 +2226,19 @@ function setstricttime() -- this function manages the check box in the menu
   buildMenuBar()
 end
 
-function coolfunc(hswindow, appname, straw) -- function that handles saving and loading of project times in ~/.hammerspoon/resources/time/
+function coolfunc(hswindow, appname, straw) -- function that handles saving and loading of project times in ~/.les/resources/time/
 
   if trackname ~= nil then -- saving old time
     oldtrackname = trackname
     print(_G["timer_" .. oldtrackname])
-    os.execute([[mkdir ~/.hammerspoon/resources/time]])
-    local filepath = homepath .. [[/.hammerspoon/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]]
+    os.execute([[mkdir ~/.les/resources/time]])
+    local filepath = homepath .. [[/.les/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]]
     local f2=io.open(filepath,"r")
     if f2~=nil then
       io.close(f2)
-      os.execute([[rm ~/.hammerspoon/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]])
+      os.execute([[rm ~/.les/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]])
     end
-    os.execute([[echo ']] .. _G["timer_" .. oldtrackname] .. [[' >~/.hammerspoon/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]])
+    os.execute([[echo ']] .. _G["timer_" .. oldtrackname] .. [[' >~/.les/resources/time/]] .. oldtrackname .. "_time" .. [[.txt]])
     _G["timer_" .. oldtrackname] = nil
   end
 
@@ -2258,7 +2258,7 @@ function coolfunc(hswindow, appname, straw) -- function that handles saving and 
     return
   end
 
-  filepath = homepath .. [[/.hammerspoon/resources/time/]] .. trackname .. "_time" .. [[.txt]] -- loading old time (if it exists)
+  filepath = homepath .. [[/.les/resources/time/]] .. trackname .. "_time" .. [[.txt]] -- loading old time (if it exists)
   local f=io.open(filepath,"r")
   if f~=nil then 
     print("timer file found")
@@ -2372,7 +2372,7 @@ function requesttime() -- this is the function for when someone checks the curre
   if response == "Reset Time" then
     response = hs.dialog.blockAlert("Are you sure?", "This action cannot be undone", "No", "Yes", "NSCriticalAlertStyle")
     if response == "Yes" then
-      os.execute([[rm ~/.hammerspoon/resources/time/]] .. trackname .. "_time" .. [[.txt]])
+      os.execute([[rm ~/.les/resources/time/]] .. trackname .. "_time" .. [[.txt]])
       coolfunc()
     end
   end
@@ -2388,7 +2388,7 @@ function requesttime() -- this is the function for when someone checks the curre
   --   if o == [[{ 'bhit':'utxt'("Yes") }]] then
   --     _G["timer_" .. trackname] = nil
   --     _G["timer_" .. oldtrackname] = nil
-  --     os.execute([[rm ~/.hammerspoon/resources/time/]] .. trackname .. "_time" .. [[.txt]])
+  --     os.execute([[rm ~/.les/resources/time/]] .. trackname .. "_time" .. [[.txt]])
   --     coolfunc()
   --   end
   -- end
@@ -2866,8 +2866,8 @@ if _G.bookmarkx == nil or _G.dynamicreload == nil or _G.double0todelete == nil t
   b = nil
   t = nil
   if o == [[{ 'bhit':'utxt'("Yes") }]] then
-    os.execute([[rm ~/.hammerspoon/settings.ini]])
-    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.hammerspoon/]])
+    os.execute([[rm ~/.les/settings.ini]])
+    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.les/]])
     reloadLES()
   elseif o == [[{ 'bhit':'utxt'("No") }]] then
     hs.osascript.applescript([[tell application "System Events" to display dialog "LES will exit." buttons {"Ok"} default button "Ok" with title "Live Enhancement Suite" with icon POSIX file "/Applications/Live Enhancement Suite.app/Contents/Resources/extensions/hs/les/assets/LESdialog2.icns"]])
@@ -2882,8 +2882,8 @@ if _G.absolutereplace == nil or _G.enableclosewindow == nil or _G.vstshortcuts =
   b = nil
   t = nil
   if o == [[{ 'bhit':'utxt'("Yes") }]] then
-    os.execute([[rm ~/.hammerspoon/settings.ini]])
-    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.hammerspoon/]])
+    os.execute([[rm ~/.les/settings.ini]])
+    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/assets/settings.ini ~/.les/]])
     reloadLES()
   end
   o = nil

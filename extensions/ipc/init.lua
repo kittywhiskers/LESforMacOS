@@ -2,7 +2,7 @@
 ---
 --- Provides Hammerspoon with the ability to create both local and remote message ports for inter-process communication.
 ---
---- The most common use of this module is to provide support for the command line tool `hs` which can be added to your terminal shell environment with [hs.ipc.cliInstall](#cliInstall).  The command line tool will not work unless the `hs.ipc` module is loaded first, so it is recommended that you add `require("hs.ipc")` to your Hammerspoon `init.lua` file (usually located at ~/.hammerspoon/init.lua) so that it is always available when Hammerspoon is running.
+--- The most common use of this module is to provide support for the command line tool `hs` which can be added to your terminal shell environment with [hs.ipc.cliInstall](#cliInstall).  The command line tool will not work unless the `hs.ipc` module is loaded first, so it is recommended that you add `require("hs.ipc")` to your Hammerspoon `init.lua` file (usually located at ~/.les/init.lua) so that it is always available when Hammerspoon is running.
 ---
 --- This module is based heavily on code from Mjolnir by [Steven Degutis](https://github.com/sdegutis/).
 
@@ -156,7 +156,7 @@ end
 ---  * the current, possibly changed, value
 ---
 --- Notes:
----  * If this is enabled, your history is saved in `hs.configDir .. ".cli.history"`, which is usually "~/.hammerspoon/.cli.history".
+---  * If this is enabled, your history is saved in `hs.configDir .. ".cli.history"`, which is usually "~/.les/.cli.history".
 ---  * If you have multiple invocations of the command line tool running at the same time, only the history of the last one cleanly exited is saved; this is a limitation of the readline wrapper Apple has provided for libedit and at present no workaround is known.
 ---
 ---  * Changes made with this function are saved with `hs.settings` with the label "ipc.cli.saveHistory" and will persist through a reload or restart of Hammerspoon.
@@ -179,7 +179,7 @@ end
 ---  * the current, possibly changed, value
 ---
 --- Notes:
----  * When [hs.ipc.cliSaveHistory](#cliSaveHistory) is enabled, your history is saved in `hs.configDir .. ".cli.history"`, which is usually "~/.hammerspoon/.cli.history".
+---  * When [hs.ipc.cliSaveHistory](#cliSaveHistory) is enabled, your history is saved in `hs.configDir .. ".cli.history"`, which is usually "~/.les/.cli.history".
 ---  * If you have multiple invocations of the command line tool running at the same time, only the history of the last one cleanly exited is saved; this is a limitation of the readline wrapper Apple has provided for libedit and at present no workaround is known.
 ---
 ---  * Changes made with this function are saved with `hs.settings` with the label "ipc.cli.historyLimit" and will persist through a reload or restart of Hammerspoon.

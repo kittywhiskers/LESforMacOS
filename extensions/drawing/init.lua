@@ -19,7 +19,7 @@ return require("hs.drawing.canvasWrapper")
 ---
 --- Notes:
 ---  * This method should only be used on an image drawing object
----  * Paths relative to the PWD of Hammerspoon (typically ~/.hammerspoon/) will work, but paths relative to the UNIX homedir character, `~` will not
+---  * Paths relative to the PWD of Hammerspoon (typically ~/.les/) will work, but paths relative to the UNIX homedir character, `~` will not
 ---  * Animated GIFs are supported. They're not super friendly on your CPU, but they work
 
 --- hs.drawing:setImageASCII(ascii) -> drawingObject
@@ -180,7 +180,7 @@ return require("hs.drawing.canvasWrapper")
 ---
 --- Returns:
 ---  * An `hs.drawing` object, or nil if an error occurs
----  * Paths relative to the PWD of Hammerspoon (typically ~/.hammerspoon/) will work, but paths relative to the UNIX homedir character, `~` will not
+---  * Paths relative to the PWD of Hammerspoon (typically ~/.les/) will work, but paths relative to the UNIX homedir character, `~` will not
 ---  * Animated GIFs are supported. They're not super friendly on your CPU, but they work
 ---
 --- Notes:
