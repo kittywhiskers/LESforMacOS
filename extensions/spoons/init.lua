@@ -43,7 +43,7 @@ end
 ---
 --- Parameters:
 ---  * name: name of the new spoon, without the `.spoon` extension
----  * basedir: (optional) directory where to create the template. Defaults to `~/.hammerspoon/Spoons`
+---  * basedir: (optional) directory where to create the template. Defaults to `~/.les/Spoons`
 ---  * metadata: (optional) table containing metadata values to be inserted in the template. Provided values are merged with the defaults. Defaults to:
 ---    ```
 ---    {

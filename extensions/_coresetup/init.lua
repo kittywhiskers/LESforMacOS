@@ -16,7 +16,7 @@ return {setup=function(...)
 
 --- hs.configdir
 --- Constant
---- A string containing Hammerspoon's configuration directory. Typically `~/.hammerspoon/`
+--- A string containing Hammerspoon's configuration directory. Typically `~/.les/`
   hs.configdir = configdir
 
 --- hs.dockIconClickCallback
@@ -545,7 +545,7 @@ hs.fileDroppedToDockIconCallback = nil
       os.exit()
     end
     hs.notify.show("Live Enhancement Suite", "Welcome to LES!", "Please wait a moment while we set get things ready...")
-    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/init.lua ~/.hammerspoon/]])
+    os.execute([[cp /Applications/Live\ Enhancement\ Suite.app/Contents/Resources/extensions/hs/les/init.lua ~/.les/]])
     -- hs.notify.register("__noinitfile", function() os.execute("open http://www.hammerspoon.org/go/") end)
     -- hs.notify.show("Hammerspoon", "No config file found", "Click here for the Getting Started Guide", "__noinitfile")
     -- hs.printf("-- Can't find %s; create it and reload your config.", prettypath)
