@@ -1,0 +1,3 @@
+[submodule "extensions/les"]
+	path = extensions/les
+	url = https://github.com/LiveEnhancementSuite/HSModule
