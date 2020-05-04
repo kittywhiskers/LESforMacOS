@@ -9,6 +9,11 @@ return {setup=function(...)
   local modpath, prettypath, fullpath, configdir, docstringspath, hasinitfile, autoload_extensions = ...
   local tostring,pack,tconcat,sformat=tostring,table.pack,table.concat,string.format
   local crashLog = require("hs.crash").crashLog
+  local fnutils = require("hs.fnutils")
+  local hsmath = require("hs.math")
+
+  -- seed RNG before we do anything else
+  math.randomseed(hsmath.randomFloat()*100000000)
 
   -- setup core functions
 
@@ -61,6 +66,20 @@ hs.textDroppedToDockIconCallback = nil
 ---  * If multiple files are sent, this callback will be called once for each file
 ---  * This callback will be triggered when ANY file type is dragged onto the Hammerspoon Dock Icon, however certain filetypes are also processed seperately by Hammerspoon. For example, `hs.urlevent` will be triggered when the following filetypes are dropped onto the Dock Icon: HTML Documents (.html, .htm, .shtml, .jhtml), Plain text documents (.txt, .text), Web site locations (.url), XHTML documents (.xhtml, .xht, .xhtm, .xht).
 hs.fileDroppedToDockIconCallback = nil
+
+--- hs.relaunch()
+--- Function
+--- Quits and relaunches Hammerspoon.
+---
+--- Parameters:
+---  * None
+---
+--- Returns:
+---  * None
+hs.relaunch = function()
+    os.execute([[ (while ps -p ]]..hs.processInfo.processID..[[ > /dev/null ; do sleep 1 ; done ; open -a "]]..hs.processInfo.bundlePath..[[" ) & ]])
+    hs._exit(true, true)
+end
 
 --- hs.docstrings_json_file
 --- Constant

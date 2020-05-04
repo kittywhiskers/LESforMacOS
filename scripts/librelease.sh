@@ -466,7 +466,8 @@ EOF
 
 function release_update_appcast() {
   echo "Updating appcast.xml..."
-  local BUILD_NUMBER=$(xcodebuild -target Hammerspoon -configuration Release -showBuildSettings 2>/dev/null | grep CURRENT_PROJECT_VERSION | awk '{ print $3 }')
+  pushd "${HAMMERSPOON_HOME}/" >/dev/null
+  local BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print :CFBundleVersion" Hammerspoon/Hammerspoon-Info.plist)
   local NEWCHUNK="<!-- __UPDATE_MARKER__ -->
         <item>
             <title>Version ${VERSION}</title>
@@ -476,7 +477,7 @@ function release_update_appcast() {
             <pubDate>$(date +"%a, %e %b %Y %H:%M:%S %z")</pubDate>
             <enclosure url=\"https://github.com/Hammerspoon/hammerspoon/releases/download/${VERSION}/Hammerspoon-${VERSION}.zip\"
                 sparkle:version=\"${BUILD_NUMBER}\"
-                sparkle:shortVersionString\"${VERSION}\"
+                sparkle:shortVersionString=\"${VERSION}\"
                 length=\"${ZIPLEN}\"
                 type=\"application/octet-stream\"
             />
@@ -487,6 +488,7 @@ function release_update_appcast() {
   git add appcast.xml
   git commit -qam "Update appcast.xml for ${VERSION}"
   git push
+  popd >/dev/null
 }
 
 function release_tweet() {

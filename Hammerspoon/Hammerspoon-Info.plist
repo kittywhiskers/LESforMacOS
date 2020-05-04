@@ -17,15 +17,15 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.9.76</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>5101</string>
+	<string>5129</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>a9a43ddffec0ebfb007388756dfd662a9c153188</string>
+		<string>ffffffffffffffffffffffffffffffffffffffff</string>
 		<key>Kits</key>
 		<array>
 			<dict>
@@ -40,6 +40,8 @@
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
+	<key>LSUIElement</key>
+	<true/>
 	<key>NSAppSleepDisabled</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -101,9 +103,9 @@
 	<key>OSAScriptingDefinition</key>
 	<string>Hammerspoon.sdef</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/Hammerspoon/hammerspoon/master/appcast.xml</string>
+	<string></string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>21600</integer>
 </dict>
