@@ -92,6 +92,16 @@
 		4F5134641C30819000EFD6D4 /* chooser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F5134631C30819000EFD6D4 /* chooser.h */; };
 		4F5B6E6B1E9E86BB003FC580 /* Hammerspoon.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 4F5B6E6A1E9E86BB003FC580 /* Hammerspoon.sdef */; };
 		4F5B6E6E1E9E87CE003FC580 /* HSAppleScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B6E6D1E9E87CE003FC580 /* HSAppleScript.m */; };
+		4F6653E6238C36F100DEE120 /* HSStreamDeckDeviceOriginal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6653E4238C36F100DEE120 /* HSStreamDeckDeviceOriginal.h */; };
+		4F6653E7238C36F100DEE120 /* HSStreamDeckDeviceOriginal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6653E5238C36F100DEE120 /* HSStreamDeckDeviceOriginal.m */; };
+		4F6653EA238C6B6600DEE120 /* HSStreamDeckDeviceMini.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6653E8238C6B6600DEE120 /* HSStreamDeckDeviceMini.h */; };
+		4F6653EB238C6B6600DEE120 /* HSStreamDeckDeviceMini.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6653E9238C6B6600DEE120 /* HSStreamDeckDeviceMini.m */; };
+		4F6653EE238C7A1200DEE120 /* NSImage+Rotated.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6653EC238C7A1200DEE120 /* NSImage+Rotated.h */; };
+		4F6653EF238C7A1200DEE120 /* NSImage+Rotated.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6653ED238C7A1200DEE120 /* NSImage+Rotated.m */; };
+		4F6653F2238C7BC600DEE120 /* NSImage+Flipped.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6653F0238C7BC600DEE120 /* NSImage+Flipped.h */; };
+		4F6653F3238C7BC600DEE120 /* NSImage+Flipped.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6653F1238C7BC600DEE120 /* NSImage+Flipped.m */; };
+		4F6653F62390351100DEE120 /* NSImage+JPEG.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6653F42390351100DEE120 /* NSImage+JPEG.h */; };
+		4F6653F72390351100DEE120 /* NSImage+JPEG.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6653F52390351100DEE120 /* NSImage+JPEG.m */; };
 		4F68B530227C2DD70076C4F8 /* HSChooserVerticallyCenteringTextFieldCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F68B52E227C2DD70076C4F8 /* HSChooserVerticallyCenteringTextFieldCell.h */; };
 		4F68B531227C2DD70076C4F8 /* HSChooserVerticallyCenteringTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F68B52F227C2DD70076C4F8 /* HSChooserVerticallyCenteringTextFieldCell.m */; };
 		4F6B3EA31B73D6D300B2A4DE /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
@@ -149,6 +159,10 @@
 		4FC09F7C19F99ECE007542A6 /* docs.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FC09F7B19F99ECE007542A6 /* docs.json */; };
 		4FC93CA21BCD872D0041B820 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		4FC93CA81BCD87440041B820 /* watcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC93C9B1BCD2D8A0041B820 /* watcher.m */; settings = {COMPILER_FLAGS = "-std=c99"; }; };
+		4FCBAFC723B0D941007BA1D0 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
+		4FCBAFD323B0F7F1007BA1D0 /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBAFD223B0F7F1007BA1D0 /* internal.m */; };
+		4FCBAFD723B0FB95007BA1D0 /* HSmath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCBAFD623B0FB95007BA1D0 /* HSmath.m */; };
+		4FCBAFD923B1152F007BA1D0 /* test_math.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4FCBAFD823B0FC04007BA1D0 /* test_math.lua */; };
 		4FCC52CE1E1527EF007F93D0 /* HSbrightness.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCC52CD1E1527EF007F93D0 /* HSbrightness.m */; };
 		4FCC52CF1E1528D4007F93D0 /* test_brightness.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4FCC52CB1E1526A6007F93D0 /* test_brightness.lua */; };
 		4FD0AB181B7484D700A82496 /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
@@ -213,6 +227,10 @@
 		4FEF4D4F1C5FA01100E3B939 /* HSaudiodevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF4D4E1C5FA01000E3B939 /* HSaudiodevice.m */; };
 		4FEF4D551C5FBC0F00E3B939 /* test_audiodevice.lua in Resources */ = {isa = PBXBuildFile; fileRef = 4FEF4D531C5FBA9800E3B939 /* test_audiodevice.lua */; };
 		4FEF59431B29A352002344A7 /* HSGrowingTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEF59421B29A352002344A7 /* HSGrowingTextField.m */; };
+		4FFB20FC23C5E01300811E77 /* HSStreamDeckDeviceXL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FFB20FA23C5E01300811E77 /* HSStreamDeckDeviceXL.h */; };
+		4FFB20FD23C5E01300811E77 /* HSStreamDeckDeviceXL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB20FB23C5E01300811E77 /* HSStreamDeckDeviceXL.m */; };
+		4FFB210023CD14A500811E77 /* HSStreamDeckDeviceOriginalV2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FFB20FE23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.h */; };
+		4FFB210123CD14A500811E77 /* HSStreamDeckDeviceOriginalV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB20FF23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.m */; };
 		6AE181221D36E90B0097211C /* LuaSkin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9850E81B722CBF00F7E909 /* LuaSkin.framework */; };
 		6AE181281D36E9260097211C /* detectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AE181161D36E8E50097211C /* detectors.cpp */; };
 		6AE1812A1D36E9260097211C /* internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE181191D36E8E50097211C /* internal.m */; };
@@ -584,6 +602,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4FC93C9D1BCD872D0041B820;
 			remoteInfo = audiodevicewatcher;
+		};
+		4FCBAFCF23B0D98F007BA1D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9445CA0319083251002568BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FCBAFC323B0D941007BA1D0;
+			remoteInfo = math;
 		};
 		4FCC42A61F6B800900485268 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1033,6 +1058,16 @@
 		4F5B6E6C1E9E87CE003FC580 /* HSAppleScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSAppleScript.h; sourceTree = "<group>"; };
 		4F5B6E6D1E9E87CE003FC580 /* HSAppleScript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSAppleScript.m; sourceTree = "<group>"; };
 		4F64D8BD1B724C4B00FC4C65 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/alert/init.lua; sourceTree = "<group>"; };
+		4F6653E4238C36F100DEE120 /* HSStreamDeckDeviceOriginal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HSStreamDeckDeviceOriginal.h; path = extensions/streamdeck/HSStreamDeckDeviceOriginal.h; sourceTree = "<group>"; };
+		4F6653E5238C36F100DEE120 /* HSStreamDeckDeviceOriginal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HSStreamDeckDeviceOriginal.m; path = extensions/streamdeck/HSStreamDeckDeviceOriginal.m; sourceTree = "<group>"; };
+		4F6653E8238C6B6600DEE120 /* HSStreamDeckDeviceMini.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HSStreamDeckDeviceMini.h; path = extensions/streamdeck/HSStreamDeckDeviceMini.h; sourceTree = "<group>"; };
+		4F6653E9238C6B6600DEE120 /* HSStreamDeckDeviceMini.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HSStreamDeckDeviceMini.m; path = extensions/streamdeck/HSStreamDeckDeviceMini.m; sourceTree = "<group>"; };
+		4F6653EC238C7A1200DEE120 /* NSImage+Rotated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+Rotated.h"; path = "extensions/streamdeck/NSImage+Rotated.h"; sourceTree = "<group>"; };
+		4F6653ED238C7A1200DEE120 /* NSImage+Rotated.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Rotated.m"; path = "extensions/streamdeck/NSImage+Rotated.m"; sourceTree = "<group>"; };
+		4F6653F0238C7BC600DEE120 /* NSImage+Flipped.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+Flipped.h"; path = "extensions/streamdeck/NSImage+Flipped.h"; sourceTree = "<group>"; };
+		4F6653F1238C7BC600DEE120 /* NSImage+Flipped.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Flipped.m"; path = "extensions/streamdeck/NSImage+Flipped.m"; sourceTree = "<group>"; };
+		4F6653F42390351100DEE120 /* NSImage+JPEG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSImage+JPEG.h"; path = "extensions/streamdeck/NSImage+JPEG.h"; sourceTree = "<group>"; };
+		4F6653F52390351100DEE120 /* NSImage+JPEG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSImage+JPEG.m"; path = "extensions/streamdeck/NSImage+JPEG.m"; sourceTree = "<group>"; };
 		4F6689E01C2852B500E48AF1 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/_coresetup/init.lua; sourceTree = "<group>"; };
 		4F6689E31C288BAA00E48AF1 /* init.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = init.lua; path = extensions/redshift/init.lua; sourceTree = "<group>"; };
 		4F68B52E227C2DD70076C4F8 /* HSChooserVerticallyCenteringTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HSChooserVerticallyCenteringTextFieldCell.h; path = extensions/chooser/HSChooserVerticallyCenteringTextFieldCell.h; sourceTree = "<group>"; };
@@ -1124,6 +1159,11 @@
 		4FC09F7B19F99ECE007542A6 /* docs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = docs.json; path = build/docs.json; sourceTree = "<group>"; };
 		4FC93C9B1BCD2D8A0041B820 /* watcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = watcher.m; path = extensions/audiodevice/watcher.m; sourceTree = "<group>"; };
 		4FC93CA71BCD872D0041B820 /* libaudiodevicewatcher.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libaudiodevicewatcher.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FCBAFCD23B0D941007BA1D0 /* libmath.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libmath.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FCBAFD223B0F7F1007BA1D0 /* internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = internal.m; path = extensions/math/internal.m; sourceTree = "<group>"; };
+		4FCBAFD423B0F805007BA1D0 /* init.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = init.lua; path = extensions/math/init.lua; sourceTree = "<group>"; };
+		4FCBAFD623B0FB95007BA1D0 /* HSmath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSmath.m; sourceTree = "<group>"; };
+		4FCBAFD823B0FC04007BA1D0 /* test_math.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = test_math.lua; sourceTree = "<group>"; };
 		4FCC52CB1E1526A6007F93D0 /* test_brightness.lua */ = {isa = PBXFileReference; lastKnownFileType = text; name = test_brightness.lua; path = extensions/brightness/test_brightness.lua; sourceTree = "<group>"; };
 		4FCC52CD1E1527EF007F93D0 /* HSbrightness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSbrightness.m; sourceTree = "<group>"; };
 		4FD0AB1D1B7484D700A82496 /* libspaceswatcher.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libspaceswatcher.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1216,6 +1256,10 @@
 		4FEF4D531C5FBA9800E3B939 /* test_audiodevice.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test_audiodevice.lua; path = extensions/audiodevice/test_audiodevice.lua; sourceTree = "<group>"; };
 		4FEF59411B29A352002344A7 /* HSGrowingTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGrowingTextField.h; sourceTree = "<group>"; };
 		4FEF59421B29A352002344A7 /* HSGrowingTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGrowingTextField.m; sourceTree = "<group>"; };
+		4FFB20FA23C5E01300811E77 /* HSStreamDeckDeviceXL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HSStreamDeckDeviceXL.h; path = extensions/streamdeck/HSStreamDeckDeviceXL.h; sourceTree = "<group>"; };
+		4FFB20FB23C5E01300811E77 /* HSStreamDeckDeviceXL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HSStreamDeckDeviceXL.m; path = extensions/streamdeck/HSStreamDeckDeviceXL.m; sourceTree = "<group>"; };
+		4FFB20FE23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSStreamDeckDeviceOriginalV2.h; path = extensions/streamdeck/HSStreamDeckDeviceOriginalV2.h; sourceTree = "<group>"; };
+		4FFB20FF23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSStreamDeckDeviceOriginalV2.m; path = extensions/streamdeck/HSStreamDeckDeviceOriginalV2.m; sourceTree = "<group>"; };
 		5BC78AF8FE9DA0BD317A7528 /* libPods-Hammerspoon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hammerspoon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE181161D36E8E50097211C /* detectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = detectors.cpp; path = extensions/noises/detectors.cpp; sourceTree = "<group>"; };
 		6AE181171D36E8E50097211C /* detectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = detectors.h; path = extensions/noises/detectors.h; sourceTree = "<group>"; };
@@ -1678,6 +1722,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC93CA21BCD872D0041B820 /* LuaSkin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FCBAFC623B0D941007BA1D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCBAFC723B0D941007BA1D0 /* LuaSkin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2152,14 +2204,28 @@
 		4F2DF3DC1F60468E00742D08 /* streamdeck */ = {
 			isa = PBXGroup;
 			children = (
-				4F2DF3DD1F6046AD00742D08 /* init.lua */,
-				4F2DF3DE1F6046AD00742D08 /* internal.m */,
-				4F2DF3EE1F605A4900742D08 /* HSStreamDeckManager.h */,
-				4F2DF3EF1F605A4900742D08 /* HSStreamDeckManager.m */,
 				4F2DF3F21F605A9B00742D08 /* HSStreamDeckDevice.h */,
 				4F2DF3F31F605A9B00742D08 /* HSStreamDeckDevice.m */,
+				4F6653E8238C6B6600DEE120 /* HSStreamDeckDeviceMini.h */,
+				4F6653E9238C6B6600DEE120 /* HSStreamDeckDeviceMini.m */,
+				4F6653E4238C36F100DEE120 /* HSStreamDeckDeviceOriginal.h */,
+				4F6653E5238C36F100DEE120 /* HSStreamDeckDeviceOriginal.m */,
+				4FFB20FE23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.h */,
+				4FFB20FF23CD14A400811E77 /* HSStreamDeckDeviceOriginalV2.m */,
+				4FFB20FA23C5E01300811E77 /* HSStreamDeckDeviceXL.h */,
+				4FFB20FB23C5E01300811E77 /* HSStreamDeckDeviceXL.m */,
+				4F2DF3EE1F605A4900742D08 /* HSStreamDeckManager.h */,
+				4F2DF3EF1F605A4900742D08 /* HSStreamDeckManager.m */,
+				4F2DF3DD1F6046AD00742D08 /* init.lua */,
+				4F2DF3DE1F6046AD00742D08 /* internal.m */,
 				4F2DF3F61F6170BE00742D08 /* NSImage+BMP.h */,
 				4F2DF3F71F6170BE00742D08 /* NSImage+BMP.m */,
+				4F6653F0238C7BC600DEE120 /* NSImage+Flipped.h */,
+				4F6653F1238C7BC600DEE120 /* NSImage+Flipped.m */,
+				4F6653F42390351100DEE120 /* NSImage+JPEG.h */,
+				4F6653F52390351100DEE120 /* NSImage+JPEG.m */,
+				4F6653EC238C7A1200DEE120 /* NSImage+Rotated.h */,
+				4F6653ED238C7A1200DEE120 /* NSImage+Rotated.m */,
 				4F2DF3FA1F61AE6700742D08 /* streamdeck.h */,
 			);
 			name = streamdeck;
@@ -2576,8 +2642,6 @@
 		4F98506D1B722C4100F7E909 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D62F9EAA2320B7F600FAE188 /* bonjour */,
-				B8524F23201A874600844F3D /* hid */,
 				4F6689DF1C2852A100E48AF1 /* _coresetup */,
 				4F64D8BC1B724C3A00FC4C65 /* alert */,
 				4FDE05F71B73568E00E9E8EE /* appfinder */,
@@ -2589,6 +2653,7 @@
 				4F70EEEC1B72739D0025A7B3 /* base64 */,
 				4FDE05A01B72986200E9E8EE /* battery */,
 				4FDE05AF1B72989B00E9E8EE /* batterywatcher */,
+				D62F9EAA2320B7F600FAE188 /* bonjour */,
 				4FDE05C81B72C23400E9E8EE /* brightness */,
 				4FDE05DD1B734EB400E9E8EE /* caffeinate */,
 				4FDE05F01B734EF300E9E8EE /* caffeinatewatcher */,
@@ -2609,6 +2674,7 @@
 				4F4CB3E31B739A00000EA9B6 /* geometry */,
 				4F4CB3E71B739AB4000EA9B6 /* grid */,
 				4F4CB3F41B73A3D9000EA9B6 /* hash */,
+				B8524F23201A874600844F3D /* hid */,
 				4F4CB4071B73A776000EA9B6 /* hints */,
 				4F4CB4181B73AC35000EA9B6 /* host */,
 				4F4CB42B1B73AD36000EA9B6 /* hotkey */,
@@ -2624,6 +2690,7 @@
 				4F6B3EAF1B73DBDB00B2A4DE /* layout */,
 				4F6B3EBC1B73DC7000B2A4DE /* location */,
 				4F6B3EC61B73E14200B2A4DE /* logger */,
+				4FCBAFBF23B0D343007BA1D0 /* math */,
 				4F6B3ED71B73E27D00B2A4DE /* menubar */,
 				4F6B3EDB1B73E55300B2A4DE /* messages */,
 				22E4D7F61FA747FA00C8CF5C /* midi */,
@@ -2720,6 +2787,16 @@
 				4FC93C9B1BCD2D8A0041B820 /* watcher.m */,
 			);
 			name = audiodevicewatcher;
+			sourceTree = "<group>";
+		};
+		4FCBAFBF23B0D343007BA1D0 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				4FCBAFD823B0FC04007BA1D0 /* test_math.lua */,
+				4FCBAFD423B0F805007BA1D0 /* init.lua */,
+				4FCBAFD223B0F7F1007BA1D0 /* internal.m */,
+			);
+			name = math;
 			sourceTree = "<group>";
 		};
 		4FD0AB201B74855700A82496 /* spaces */ = {
@@ -3134,6 +3211,7 @@
 				B8524F31201A88CD00844F3D /* libhid.dylib */,
 				D62F9EBB2320B82100FAE188 /* libbonjour.dylib */,
 				D62F9EC72320B86300FAE188 /* libbonjourservice.dylib */,
+				4FCBAFCD23B0D941007BA1D0 /* libmath.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3248,6 +3326,7 @@
 				4F40EC3F1CCD0FE3006342D7 /* HSdistributednotifications.m */,
 				4C5BA6B41C85EAEB00E68CA9 /* HSfs.m */,
 				4F2C0C7221BB4A03008F32C1 /* HSinspect.m */,
+				4FCBAFD623B0FB95007BA1D0 /* HSmath.m */,
 				6AE181311D39C8F10097211C /* HSnoises.m */,
 				4CEDEE1B1C640D11005CBF97 /* HSosascript.m */,
 				D02F95281A00221C00E28BB2 /* HSrequire_all.m */,
@@ -3498,8 +3577,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2DF3F41F605A9B00742D08 /* HSStreamDeckDevice.h in Headers */,
+				4F6653F62390351100DEE120 /* NSImage+JPEG.h in Headers */,
+				4F6653E6238C36F100DEE120 /* HSStreamDeckDeviceOriginal.h in Headers */,
 				4F2DF3F81F6170BE00742D08 /* NSImage+BMP.h in Headers */,
 				4F2DF3F01F605A4900742D08 /* HSStreamDeckManager.h in Headers */,
+				4FFB210023CD14A500811E77 /* HSStreamDeckDeviceOriginalV2.h in Headers */,
+				4F6653F2238C7BC600DEE120 /* NSImage+Flipped.h in Headers */,
+				4FFB20FC23C5E01300811E77 /* HSStreamDeckDeviceXL.h in Headers */,
+				4F6653EA238C6B6600DEE120 /* HSStreamDeckDeviceMini.h in Headers */,
+				4F6653EE238C7A1200DEE120 /* NSImage+Rotated.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3726,6 +3812,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4FC93CA31BCD872D0041B820 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FCBAFC823B0D941007BA1D0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -4720,6 +4813,23 @@
 			productReference = 4FC93CA71BCD872D0041B820 /* libaudiodevicewatcher.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		4FCBAFC323B0D941007BA1D0 /* math */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FCBAFC923B0D941007BA1D0 /* Build configuration list for PBXNativeTarget "math" */;
+			buildPhases = (
+				4FCBAFC423B0D941007BA1D0 /* Sources */,
+				4FCBAFC623B0D941007BA1D0 /* Frameworks */,
+				4FCBAFC823B0D941007BA1D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = math;
+			productName = alert;
+			productReference = 4FCBAFCD23B0D941007BA1D0 /* libmath.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		4FD0AB141B7484D700A82496 /* spaceswatcher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD0AB1A1B7484D700A82496 /* Build configuration list for PBXNativeTarget "spaceswatcher" */;
@@ -5099,6 +5209,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FCBAFD023B0D98F007BA1D0 /* PBXTargetDependency */,
 				D62F9ECA2320B90200FAE188 /* PBXTargetDependency */,
 				D62F9ECC2320B90200FAE188 /* PBXTargetDependency */,
 				22E4D8051FA748E500C8CF5C /* PBXTargetDependency */,
@@ -5684,6 +5795,7 @@
 				4F6B3E9E1B73D6D300B2A4DE /* json */,
 				4F76944A1B74C96800536DE4 /* keycodes */,
 				4F6B3EB11B73DC4500B2A4DE /* location */,
+				4FCBAFC323B0D941007BA1D0 /* math */,
 				4F6B3EC81B73E23800B2A4DE /* menubar */,
 				22E4D7F91FA7488900C8CF5C /* midi */,
 				4F6B3EDD1B73E5AC00B2A4DE /* milight */,
@@ -5758,6 +5870,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FCBAFD923B1152F007BA1D0 /* test_math.lua in Resources */,
 				4FDD8E4A1C6E4FA100085D7A /* test_screen.lua in Resources */,
 				6AE181341D39C9570097211C /* test_noises.lua in Resources */,
 				4CB349EF1C7F74AD006F0DE0 /* test_javascript.lua in Resources */,
@@ -6016,10 +6129,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6653F72390351100DEE120 /* NSImage+JPEG.m in Sources */,
+				4F6653EF238C7A1200DEE120 /* NSImage+Rotated.m in Sources */,
 				4F2DF3EB1F60471400742D08 /* internal.m in Sources */,
+				4FFB210123CD14A500811E77 /* HSStreamDeckDeviceOriginalV2.m in Sources */,
+				4FFB20FD23C5E01300811E77 /* HSStreamDeckDeviceXL.m in Sources */,
 				4F2DF3F51F605A9B00742D08 /* HSStreamDeckDevice.m in Sources */,
+				4F6653EB238C6B6600DEE120 /* HSStreamDeckDeviceMini.m in Sources */,
+				4F6653E7238C36F100DEE120 /* HSStreamDeckDeviceOriginal.m in Sources */,
 				4F2DF3F91F6170BE00742D08 /* NSImage+BMP.m in Sources */,
 				4F2DF3F11F605A4900742D08 /* HSStreamDeckManager.m in Sources */,
+				4F6653F3238C7BC600DEE120 /* NSImage+Flipped.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6280,6 +6400,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FCBAFC423B0D941007BA1D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FCBAFD323B0F7F1007BA1D0 /* internal.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4FD0AB151B7484D700A82496 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -6490,6 +6618,7 @@
 				6AE181321D39C8F10097211C /* HSnoises.m in Sources */,
 				4FCC52CE1E1527EF007F93D0 /* HSbrightness.m in Sources */,
 				4FDD8E4E1C834C8100085D7A /* HSbase64.m in Sources */,
+				4FCBAFD723B0FB95007BA1D0 /* HSmath.m in Sources */,
 				4F8779D1200CD51200E9DB42 /* HSwindow.m in Sources */,
 				4FDD8E8D1C8C8BF200085D7A /* HScoresetup.m in Sources */,
 				4FDD8E4C1C6E4FBB00085D7A /* HSscreen.m in Sources */,
@@ -6889,6 +7018,11 @@
 			isa = PBXTargetDependency;
 			target = 4FC93C9D1BCD872D0041B820 /* audiodevicewatcher */;
 			targetProxy = 4FC93CAC1BCD87A60041B820 /* PBXContainerItemProxy */;
+		};
+		4FCBAFD023B0D98F007BA1D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FCBAFC323B0D941007BA1D0 /* math */;
+			targetProxy = 4FCBAFCF23B0D98F007BA1D0 /* PBXContainerItemProxy */;
 		};
 		4FCC42A71F6B800900485268 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -7920,7 +8054,7 @@
 					"\"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
-				MARKETING_VERSION = 0.9.76;
+				MARKETING_VERSION = 0.9.78;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hammerspoon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Hammerspoon;
 				SDKROOT = macosx;
@@ -12493,6 +12627,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -13728,6 +13866,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -13798,6 +13940,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -18074,6 +18220,232 @@
 			};
 			name = Release;
 		};
+		4FCBAFCA23B0D941007BA1D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		4FCBAFCB23B0D941007BA1D0 /* Profile */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"$(inherited)",
+				);
+			};
+			name = Profile;
+		};
+		4FCBAFCC23B0D941007BA1D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
+				CLANG_ANALYZER_DEADCODE_DEADSTORES = NO;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = "$(inherited)";
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = "$(inherited)";
+				CLANG_WARN_ASSIGN_ENUM = "$(inherited)";
+				CLANG_WARN_BOOL_CONVERSION = "$(inherited)";
+				CLANG_WARN_CONSTANT_CONVERSION = "$(inherited)";
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = "$(inherited)";
+				CLANG_WARN_EMPTY_BODY = "$(inherited)";
+				CLANG_WARN_ENUM_CONVERSION = "$(inherited)";
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = "$(inherited)";
+				CLANG_WARN_INT_CONVERSION = "$(inherited)";
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = "$(inherited)";
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = "$(inherited)";
+				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = "$(inherited)";
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = "$(inherited)";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = "$(inherited)";
+				CLANG_WARN_UNREACHABLE_CODE = YES_AGGRESSIVE;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = "$(inherited)";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = "$(inherited)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = "$(inherited)";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = "$(inherited)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = "$(inherited)";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_NEWLINE = "$(inherited)";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = "$(inherited)";
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = "$(inherited)";
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = "$(inherited)";
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = "$(inherited)";
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = "$(inherited)";
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = "$(inherited)";
+				GCC_WARN_MISSING_PARENTHESES = "$(inherited)";
+				GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR = "$(inherited)";
+				GCC_WARN_PEDANTIC = "$(inherited)";
+				GCC_WARN_SHADOW = "$(inherited)";
+				GCC_WARN_SIGN_COMPARE = "$(inherited)";
+				GCC_WARN_STRICT_SELECTOR_MATCH = "$(inherited)";
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = "$(inherited)";
+				GCC_WARN_UNDECLARED_SELECTOR = "$(inherited)";
+				GCC_WARN_UNKNOWN_PRAGMAS = "$(inherited)";
+				GCC_WARN_UNUSED_FUNCTION = "$(inherited)";
+				GCC_WARN_UNUSED_LABEL = "$(inherited)";
+				GCC_WARN_UNUSED_PARAMETER = "$(inherited)";
+				GCC_WARN_UNUSED_VALUE = "$(inherited)";
+				GCC_WARN_UNUSED_VARIABLE = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = "$(inherited)";
+				SDKROOT = "$(inherited)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
 		4FD0AB1B1B7484D700A82496 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -21075,7 +21447,7 @@
 					"\"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
-				MARKETING_VERSION = 0.9.76;
+				MARKETING_VERSION = 0.9.78;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hammerspoon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Hammerspoon;
 				SDKROOT = macosx;
@@ -21119,7 +21491,7 @@
 					"\"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Hammerspoon/Hammerspoon-Info.plist";
-				MARKETING_VERSION = 0.9.76;
+				MARKETING_VERSION = 0.9.78;
 				OTHER_CODE_SIGN_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.hammerspoon.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Hammerspoon;
@@ -24826,6 +25198,16 @@
 				4FC93CA51BCD872D0041B820 /* Debug */,
 				4F04549320F0EE7D00699F29 /* Profile */,
 				4FC93CA61BCD872D0041B820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4FCBAFC923B0D941007BA1D0 /* Build configuration list for PBXNativeTarget "math" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FCBAFCA23B0D941007BA1D0 /* Debug */,
+				4FCBAFCB23B0D941007BA1D0 /* Profile */,
+				4FCBAFCC23B0D941007BA1D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

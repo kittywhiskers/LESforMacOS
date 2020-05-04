@@ -3,6 +3,7 @@
 #import <CoreServices/CoreServices.h>
 #import <LuaSkin/LuaSkin.h>
 #import "../../Hammerspoon/MJAppDelegate.h"
+#import "../../Hammerspoon/MJDockIcon.h"
 
 static int refTable;
 NSArray *defaultContentTypes = nil;
@@ -85,6 +86,9 @@ static HSURLEventHandler *eventHandler;
 }
 
 - (void)handleAppleEvent:(NSAppleEventDescriptor *)event withReplyEvent: (NSAppleEventDescriptor * __unused)replyEvent {
+    // This is a completely disgusting workaround - starting in macOS 10.15 for some reason the OS reveals our Dock icon even if it's hidden, before we receive an Apple Event, so let's reassert our expected state before we go any further.
+    MJDockIconSetVisible(MJDockIconVisible());
+
     [self callbackWithURL:[[event paramDescriptorForKeyword:keyDirectObject] stringValue]];
 }
 
@@ -310,8 +314,7 @@ static int urleventopenURLWithBundle(lua_State *L) {
 static int urlevent_setup() {
     eventHandler = [[HSURLEventHandler alloc] init];
 
-    defaultContentTypes = @[(__bridge NSString *)kUTTypeHTML,
-                            (__bridge NSString *)kUTTypeURL,
+    defaultContentTypes = @[(__bridge NSString *)kUTTypeURL,
                             (__bridge NSString *)kUTTypeFileURL,
                             (__bridge NSString *)kUTTypeText
                             ];
