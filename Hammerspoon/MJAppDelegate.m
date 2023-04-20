@@ -271,8 +271,8 @@
     [[MJConsoleWindowController singleton] setup];
     MJLuaCreate();
 
-    if (!MJAccessibilityIsEnabled())
-        [[MJPreferencesWindowController singleton] showWindow: nil];
+    //if (!MJAccessibilityIsEnabled())
+    //    [[MJPreferencesWindowController singleton] showWindow: nil];
 }
 
 // Dragging & Dropping of Text to Dock Item
