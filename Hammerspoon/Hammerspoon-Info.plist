@@ -25,7 +25,7 @@
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>a9a43ddffec0ebfb007388756dfd662a9c153188</string>
+		<string>ffffffffffffffffffffffffffffffffffffffff</string>
 		<key>Kits</key>
 		<array>
 			<dict>
@@ -101,9 +101,9 @@
 	<key>OSAScriptingDefinition</key>
 	<string>Hammerspoon.sdef</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/Hammerspoon/hammerspoon/master/appcast.xml</string>
+	<string></string>
 	<key>SUScheduledCheckInterval</key>
 	<integer>21600</integer>
 </dict>
