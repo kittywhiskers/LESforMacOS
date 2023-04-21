@@ -7,14 +7,14 @@ testDistNotValue = nil
 
 function testDistributedNotifications()
   distNotWatcher = hs.distributednotifications.new(function(name, object, userInfo)
-    if (name == "org.hammerspoon.Hammerspoon.testDistributedNotifications" and
-        object == "org.hammerspoon.Hammerspoon.testRunner") then
+    if (name == "org.les.LiveEnhancementSuite.testDistributedNotifications" and
+        object == "org.les.LiveEnhancementSuite.testRunner") then
       testDistNotValue = true
     end
-  end, "org.hammerspoon.Hammerspoon.testDistributedNotifications")
+  end, "org.les.LiveEnhancementSuite.testDistributedNotifications")
   distNotWatcher:start()
 
-  hs.distributednotifications.post("org.hammerspoon.Hammerspoon.testDistributedNotifications", "org.hammerspoon.Hammerspoon.testRunner")
+  hs.distributednotifications.post("org.les.LiveEnhancementSuite.testDistributedNotifications", "org.les.LiveEnhancementSuite.testRunner")
 
   return success()
 end
