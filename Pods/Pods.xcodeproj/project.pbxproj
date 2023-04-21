@@ -2046,6 +2046,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2069,6 +2070,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ORSSerialPort/ORSSerialPort-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2095,6 +2097,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -2111,6 +2114,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ASCIImage/ASCIImage-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2135,6 +2139,7 @@
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2155,6 +2160,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2178,6 +2184,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ORSSerialPort/ORSSerialPort-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2201,6 +2208,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/MIKMIDI/MIKMIDI-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2224,6 +2232,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaHTTPServer/CocoaHTTPServer-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2247,6 +2256,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/PocketSocket/PocketSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2271,6 +2281,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2295,6 +2306,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2318,6 +2330,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/MIKMIDI/MIKMIDI-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2344,6 +2357,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Profile;
@@ -2359,6 +2373,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/PocketSocket/PocketSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2382,6 +2397,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/MIKMIDI/MIKMIDI-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2406,6 +2422,7 @@
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2488,6 +2505,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaHTTPServer/CocoaHTTPServer-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2511,6 +2529,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ORSSerialPort/ORSSerialPort-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2534,6 +2553,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2557,6 +2577,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/PocketSocket/PocketSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2580,6 +2601,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2604,6 +2626,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ASCIImage/ASCIImage-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2627,6 +2650,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaHTTPServer/CocoaHTTPServer-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2651,6 +2675,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2676,6 +2701,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/ASCIImage/ASCIImage-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2700,6 +2726,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaLumberjack/CocoaLumberjack-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2725,6 +2752,7 @@
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -2880,6 +2908,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -2895,6 +2924,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
