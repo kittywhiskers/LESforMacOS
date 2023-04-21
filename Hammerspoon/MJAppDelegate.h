@@ -5,10 +5,6 @@
 //  Created by Chris Jones on 02/09/2015.
 //  Copyright (c) 2015 Hammerspoon. All rights reserved.
 //
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wvariadic-macros"
-#import "Sentry.h"
-#pragma clang diagnostic pop
 
 #ifndef NO_INTENTS
 #import "HSExecuteLuaIntentHandler.h"
