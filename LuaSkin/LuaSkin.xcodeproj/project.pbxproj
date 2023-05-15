@@ -623,6 +623,8 @@
 			baseConfigurationReference = 4F0C1C7D273143D0002CA157 /* LuaSkin-Base.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = "";
 			};
 			name = Profile;
 		};
@@ -723,6 +725,8 @@
 			baseConfigurationReference = 4F0C1C7D273143D0002CA157 /* LuaSkin-Base.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = "";
 			};
 			name = Debug;
 		};
@@ -731,6 +735,8 @@
 			baseConfigurationReference = 4F0C1C7E273143DF002CA157 /* LuaSkin-Release.xcconfig */;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
+				CODE_SIGN_IDENTITY = "-";
+				DEVELOPMENT_TEAM = "";
 			};
 			name = Release;
 		};
