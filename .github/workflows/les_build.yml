@@ -1,0 +1,27 @@
+name: Build
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: macos-11
+    env:
+        DEVELOPER_DIR: /Applications/Xcode_12.4.app/Contents/Developer
+    steps:
+      - name: Cloning Git repository
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+      - name: Install dependencies
+        run: |
+          brew install coreutils jq xcbeautify gawk gh gpg
+      - name: Attempt to build the Live Enhancement Suite for macOS
+        shell: bash
+        run: |
+          export LOG_NAME="build_$(date +%s).log"
+          export XCODE_ARGS="clean build"
+          export XCODE_ARGS="${XCODE_ARGS} GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=NO GCC_TREAT_WARNINGS_AS_ERRORS=NO CLANG_ENABLE_CODE_COVERAGE=NO"
+          export XCODE_ARGS="${XCODE_ARGS} -enableAddressSanitizer NO -enableThreadSanitizer NO -enableUndefinedBehaviorSanitizer NO"
+          export XCODE_ARGS="${XCODE_ARGS} SDKROOT=${DEVELOPER_DIR}/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk"
+          export XCODE_ARGS="${XCODE_ARGS} MACOSX_DEPLOYMENT_TARGET=10.13"
+          xcodebuild -workspace Hammerspoon.xcworkspace -scheme Release -configuration Release ${XCODE_ARGS} | \
+            tee ${LOG_NAME} | \
+            xcbeautify && exit ${PIPESTATUS[0]}
