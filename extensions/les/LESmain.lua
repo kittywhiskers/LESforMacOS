@@ -158,12 +158,10 @@ end
 -- notice how I'm just declaring function; it's executed later when I run reloadLES().
 
 function buildPluginMenu()
-
-    file = io.open("menuconfig.ini", "r")
     local arr = {}
-    for line in file:lines() do
-        table.insert(arr, line);
-    end -- this part of the code puts the entire config file into a table.
+    if ioFileToTable(MenuConfigFile, arr) == false then
+      panicExit(string.format([[buildPluginMenu(): unable to read %s. %s]], MenuConfigFile, HELPMSG_IO_NOHANDLER))
+    end
 
     if pluginArray ~= nil then
         delcount = #pluginArray -- delete plugin list table if there's something in it, to prevent double entries when using reloadLES()

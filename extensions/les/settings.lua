@@ -233,7 +233,9 @@ function settingsManager.init(self)
 
   -- Read settings file and load it
   local settingsFile = {}
-  ioFileToTable("settings.ini", settingsFile)
+  if ioFileToTable(ConfigFile, settingsFile) == false then
+    panicExit(string.format([[settingsManager:init(): unable to read %s. %s]], ConfigFile, HELPMSG_IO_NOHANDLER))
+  end
   self:load(settingsFile)
 
   -- Check if every settings value has been loaded from the configuration file
@@ -273,7 +275,9 @@ function settingsManager.init(self)
     end
 
     -- Flush settings file to disk
-    ioTableToFile("settings.ini", settingsFile)
+    if ioTableToFile(ConfigFile, settingsFile) == false then
+      panicExit(string.format([[settingsManager:init(): unable to write %s. %s]], ConfigFile, HELPMSG_IO_NOHANDLER))
+    end
     print("settingsManager.init(): flushed settings.ini to disk, reattempting to load configuration file")
     -- Re-load configuration file and hope 'valuesAllLoaded' is true this time
     self:init()
@@ -294,7 +298,10 @@ end
 --
 function settingsManager.writeVal(self, key, val)
   local settingsFile = {}
-  ioFileToTable("settings.ini", settingsFile)
+  if ioFileToTable(ConfigFile, settingsFile) == false then
+    panicExit(string.format([[settingsManager:writeVal(): unable to read %s. %s]], ConfigFile, HELPMSG_IO_NOHANDLER))
+  end
+
   for idx = 1, #settingsFile, 1 do
     local line = settingsFile[idx];
     if
@@ -313,7 +320,9 @@ function settingsManager.writeVal(self, key, val)
     end
     ::continue_writeval_loop::
   end
-  ioTableToFile("settings.ini", settingsFile)
+  if ioTableToFile(ConfigFile, settingsFile) == false then
+    panicExit(string.format([[settingsManager:writeVal(): unable to write %s. %s]], ConfigFile, HELPMSG_IO_NOHANDLER))
+  end
 end
 
 function settingsManager.parse(self)
