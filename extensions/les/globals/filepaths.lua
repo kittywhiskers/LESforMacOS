@@ -1,3 +1,11 @@
+--  SPDX-License-Identifier: MIT
+--
+--  Copyright (c) 2019-2023 LESforMacOS authors, see AUTHORS.txt
+--  for a list
+--
+--  Distributed under the MIT software license, see the accompanying
+--  file COPYING.txt or visit https://opensource.org/license/mit/
+
 require("helpers")
 require("globals.filenames")
 
@@ -12,17 +20,17 @@ ScriptUserResourcesPath = ScriptUserPath .. "/resources"
 BundleContentPath = BundlePath .. "/Contents/Resources"
 BundleResourcePath = BundleContentPath .. "/extensions/hs/les"
 BundleResourceAssetsPath = BundleResourcePath .. "/assets"
-BundleIconPath = QuoteString(JoinPaths(BundleContentPath, AppIcon))
+BundleIconPath = strQuote(strJoinPaths(BundleContentPath, AppIcon))
 
 function GetDataPath(string)
-    return JoinPaths(ScriptUserPath, string)
+    return strJoinPaths(ScriptUserPath, string)
 end
 
 function GetUserPath(string)
-    return JoinPaths(ScriptUserResourcesPath, string)
+    return strJoinPaths(ScriptUserResourcesPath, string)
 end
 
 function GetBundleAssetsPath(string)
-    return JoinPaths(BundleResourceAssetsPath, string)
+    return strJoinPaths(BundleResourceAssetsPath, string)
 end
 
