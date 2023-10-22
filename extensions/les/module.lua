@@ -8,31 +8,13 @@
 
 require("helpers")
 require("settings")
+require("util.io")
 
 module = {
   -- TODO: migrate globals here
 }
 
 function module.initState(self)
-  -- Converts a file to a newline-separated index table
-  function fileToTable(filePath, retTable)
-    local fileHdl = io.open(filePath, "r")
-    for _line in fileHdl:lines() do
-      table.insert(retTable, _line)
-    end
-    fileHdl:close()
-  end
-
-  -- Converts an index table into a newline-seperated file
-  -- WARNING: tableToFile does not append, it overwrites
-  function tableToFile(filePath, retTable)
-    local fileHdl = io.open(filePath, "w")
-    for idx, val in ipairs(retTable) do
-      fileHdl:write(val, "\n")
-    end
-    fileHdl:close()
-  end
-
 ::module_load_settings::
   -- It could be possible that this might be invoked more than once
   -- (see the nice goto marker above) so we should clear our loaded
@@ -44,7 +26,7 @@ function module.initState(self)
   end
 
   local settingsFile = {}
-  fileToTable("settings.ini", settingsFile)
+  ioFileToTable("settings.ini", settingsFile)
   settingsManager:load(settingsFile)
 
   -- Check if every settings value has been loaded from the configuration file
@@ -84,7 +66,7 @@ function module.initState(self)
     end
 
     -- Flush settings file to disk
-    tableToFile("settings.ini", settingsFile)
+    ioTableToFile("settings.ini", settingsFile)
     print("module.initState(): flushed settings.ini to disk, reattempting to load configuration file")
     -- Re-load configuration file and hope 'valuesAllLoaded' is true this time
     goto module_load_settings
